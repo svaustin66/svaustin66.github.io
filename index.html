@@ -1,7 +1,22 @@
+<?php
+$protocol = "HTTP/1.0";
+if ( "HTTP/1.1" == $_SERVER["SERVER_PROTOCOL"] )
+  $protocol = "HTTP/1.1";
+header( "$protocol 503 Service Unavailable", true, 503 );
+header( "Retry-After: Sat, 11 June 2016 12:00:00 GMT" );
+?>
+
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WEBSITE TITLE</title>
+
+  </head>
+  <body>
+    <h1 style="margin-top:20px;text-align:center;">Temporarily Down for Maintenance</h1>
+  </body>
 </html>
